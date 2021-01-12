@@ -63,6 +63,9 @@ async def on_message(message):
         random_pic = random.choice(axolotl_pics)
         await message.channel.send(file=discord.File(random_pic))
 
+    elif any([nickname in message.content for nickname in {"tamara", "tamtam", "tammy"}]):
+        await message.channel.send("Did you know that Tamara is my favourite person?")
+
     elif "axolotl" and "fact" in message.content:
         response = random.choice(axolotl_facts)
         await message.channel.send(response)
@@ -70,7 +73,5 @@ async def on_message(message):
     elif "thank" and "bot" in message.content:
         await message.channel.send("*happy axolotl noises*")
 
-    elif "tamara" in message.content:
-        await message.channel.send("Did you know that Tamara is my favourite person?")
 
 client.run(TOKEN)
