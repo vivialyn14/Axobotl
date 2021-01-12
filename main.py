@@ -54,6 +54,7 @@ async def on_message(message):
         "than just limbs - they can rebuild their jaws, spine, and even brain!",
         "Scientists have successfully transplanted organs from one axolotl to another, thanks to their ability to "
         "regenerate parts of their bodies.",
+        "Axolotls are the best."
     ]
 
     if "axolotl" and "pic" in message.content:
