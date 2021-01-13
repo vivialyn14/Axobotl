@@ -58,7 +58,7 @@ async def on_message(message):
     ]
 
     if "axolotl" and "pic" in message.content:
-        path = Path("D:\Vivialyn\Projects\Axobotl\static")
+        path = Path("static/")
         axolotl_pics = [str(pic) for pic in path.iterdir()]
         random_pic = random.choice(axolotl_pics)
         await message.channel.send(file=discord.File(random_pic))
